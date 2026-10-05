@@ -1,1 +1,13 @@
-<p>media-component works!</p>
+<input #v1 type="number" placeholder="Valor 1" />
+<input #v2 type="number" placeholder="Valor 2" />
+<button (click)="calcularMedia(+v1.value, +v2.value)">Calcular</button>
+
+@if (mediaParcial !== null) {
+    @if (mediaParcial >= 60) {
+        <p>Aprovado(a), com média {{mediaParcial}}</p>
+    } @else if (mediaParcial >= 10) {
+        <p>Avaliação final, com média {{mediaParcial}}</p>        
+    } @else {
+        <p>Reprovado(a), com média {{mediaParcial}}</p>
+    }
+}
